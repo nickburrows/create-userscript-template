@@ -1,16 +1,16 @@
-import { createSignal } from 'solid-js';
-import { render } from 'solid-js/web';
-import { getPanel, showToast } from '@violentmonkey/ui';
+import { createSignal } from "solid-js";
+import { render } from "solid-js/web";
+import { getPanel, showToast } from "@violentmonkey/ui";
 // global CSS
-import globalCss from './style.css';
+import globalCss from "./style.css";
 // CSS modules
-import styles, { stylesheet } from './style.module.css';
+import styles, { stylesheet } from "./style.module.css";
 
 function Counter() {
   const [getCount, setCount] = createSignal(0);
   const handleAmazing = () => {
-    setCount((count) => count + 1);
-    showToast('Amazing + 1', { theme: 'dark' });
+    setCount(count => count + 1);
+    showToast("Amazing + 1", { theme: "dark" });
   };
   return (
     <div>
@@ -28,12 +28,12 @@ function Counter() {
 
 // Let's create a movable panel using @violentmonkey/ui
 const panel = getPanel({
-  theme: 'dark',
-  style: [globalCss, stylesheet].join('\n'),
+  theme: "dark",
+  style: [globalCss, stylesheet].join("\n"),
 });
 Object.assign(panel.wrapper.style, {
-  top: '10vh',
-  left: '10vw',
+  top: "10vh",
+  left: "10vw",
 });
 panel.setMovable(true);
 panel.show();

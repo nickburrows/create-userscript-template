@@ -1,4 +1,4 @@
-declare module '*.module.css' {
+declare module "*.module.css" {
   /**
    * Generated CSS for CSS modules
    */
@@ -12,7 +12,7 @@ declare module '*.module.css' {
   export default classMap;
 }
 
-declare module '*.css' {
+declare module "*.css" {
   /**
    * Generated CSS
    */
